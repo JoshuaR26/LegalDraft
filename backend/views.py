@@ -7,10 +7,10 @@ views = Blueprint(__name__,"views")
 def home():
     return render_template("index.html",ipc="loda")
 
-@views.route("/profile")
+@views.route("/",methods=['post'])
 def profile():
-    args = request.args
-    name = args.get('name')
+    #args = request.args
+    name = request.form['u']
     
     def load_knowledge_base(file_path : str):
         with open(file_path, 'r') as file:
