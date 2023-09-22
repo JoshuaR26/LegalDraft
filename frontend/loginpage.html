@@ -41,15 +41,11 @@
     }
     .box{
         float: left;
-        height:70%;
-        width:50%;
-        padding: 0%;
     }
     .image{
         float: right;
         height: fit-content;
         width: 48%;
-        
     }
 
     #woman{
@@ -63,25 +59,42 @@
         font-size: 3rem;
         font-weight: bold;
         letter-spacing: 0.3rem;
-        width: 21rem;
-        margin-left: 15%;
+        width: 34.5rem;
+        margin-left: 6%;
         margin-top: 8%;
         
     }
     .box{
     border: 0.3rem solid rgb(232, 193, 18);
-    width: max-content;
-    height: max-content;
-    margin-left: 15%;
+    width: 30rem;
+    height: 20rem;
+    margin-left: 6%;
     margin-top: 2%;
-    padding: 4rem 4rem 4rem 4rem;
+    padding: 2rem 2rem 2rem 2rem;
     text-align: center; 
+    display: flex;
+    align-items: center center;
+    flex-direction: column;
+    justify-items: center;
     }
     #loginbutton{
         color: rgb(0, 0, 0);
         width: 200px;
         margin-top: 10px;
         background-color: rgb(229, 156, 39);
+        cursor: pointer;
+    }
+    #loginbutton:hover{
+        background-color: gold;
+    }
+
+    #googlebutton{
+        cursor: pointer;
+        background-color: white;
+    }
+
+    #googlebutton:hover{
+        background-color: palegoldenrod;
     }
 
     html{
@@ -119,12 +132,12 @@
         </div>
 
         <div class="box">
-            <button href="#">Sign up with Google </button>
+            <button href="#" id="googlebutton">Sign up with Google </button>
             <p> or </p>
-            <label> Email </label> <br>
-            <input type="email"> <br>
-            <label>Password</label> <br>
-            <input type="password"> <br>
+            <label> Email </label> 
+            <input type="email" placeholder="Enter your email"> 
+            <label>Password</label> 
+            <input type="password" placeholder="Enter your password"> 
             <button href="#" id="loginbutton">Login</button>
         </div>
         
