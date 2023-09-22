@@ -19,6 +19,7 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     padding: 5px 0;
+    position: sticky;
 }
 
 nav ul {

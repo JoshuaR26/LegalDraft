@@ -16,8 +16,12 @@
     <title>Contact Us</title>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
+    . {
+        font:poppins;
+    }
     body {
-        background-image: url("./images/Desktop\ -\ 11.png");
+        /* background-image: url("./images/Desktop\ -\ 11.png"); */
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
@@ -38,28 +42,29 @@
     }
 
     .names {
+        text-transform: uppercase;
         width: 30%;
         height: 30%;
-        font-family: 'Glegoo', serif;
+        font-family: Poppins;
         text-align: center;
         font-size: 1.6rem;
-        padding-top: 3rem;
+        /* padding-top: 3rem; */
         flex-wrap: wrap;
         background: rgba(255, 255, 255, 0.667);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); */
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         font-weight: 300;
         border: 1px solid rgba(255, 255, 255, 0.67);
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         border-radius: 2%;
-        animation: anim2 0.5s;
-
+        animation: anim2 0.2s;
+        line-height: 80px
     }
 
     .names:hover {
         transform: scale(1.05);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         filter: brightness(1);
         cursor: pointer;
     }
@@ -88,11 +93,12 @@
     }
 
     .contact-div{
+        margin-top: 60px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 40px;
-        text-decoration: underline;
+        /* text-decoration: underline; */
         transition: text-decoration 1s ease-in;
     }
 
@@ -131,7 +137,7 @@
        
     </nav>
 
-    <div class="contact-div" >Contact Us</div>
+    <div class="contact-div" >CONTACT <b>US</b></div>
 
     <!-- <div class="title">
         Contact Us
@@ -139,28 +145,29 @@
 
     <div class="container">
         <div class="names">
-            Joshua Raju <br>
-            <a href="https://www.linkedin.com/in/joshua-raju-775494256/" target="_blank"> Linkedin</a>
+            Joshua <b>Raju</b> <br>
+            <a href="https://www.linkedin.com/in/joshua-raju-775494256/" target="_blank"> <img src="./images/LinkedIn_Logo.svg.png" height="40px"></a>
         </div>
         <div class="names">
-            Ayan Biswa Dutta<br>
-            <a href="https://www.linkedin.com/in/ayan-biswa-dutta-065370248/" target="_blank"> Linkedin</a>
+            Ayan <b> Dutta</b><br>
+            <a href="https://www.linkedin.com/in/ayan-biswa-dutta-065370248/" target="_blank"> <img src="./images/LinkedIn_Logo.svg.png" height="40px"></a>
         </div>
         <div class="names">
-            Amritanshu Tripathy<br>
-            <a href="https://www.linkedin.com/in/amritanshu-tripathy-91546b253/" target="_blank"> Linkedin</a>
+            Amritanshu <b>Tripathy</b><br>
+            <a href="https://www.linkedin.com/in/amritanshu-tripathy-91546b253/" target="_blank"> <img src="./images/LinkedIn_Logo.svg.png" height="40px"></a>
         </div>
         <div class="names">
-            Aditya Rana<br>
-            <a href="https://www.linkedin.com/in/aditya-rana-9a81b0235" target="_blank"> Linkedin</a>
+            Aditya <b>Rana</b><br>
+            <a href="https://www.linkedin.com/in/aditya-rana-9a81b0235" target="_blank"> <img src="./images/LinkedIn_Logo.svg.png" height="40px"></a>
         </div>
         <div class="names">
-            Adisha Shaikh<br>
-            <a href="https://www.linkedin.com/in/adisha-shaikh-917035250/" target="_blank"> Linkedin</a>
+            Adisha <b>Shaikh</b><br>
+            <a href="https://www.linkedin.com/in/adisha-shaikh-917035250/" target="_blank"> <img src="./images/LinkedIn_Logo.svg.png" height="40px"></a>
         </div>
         <div class="names">
-            Deepika M<br>
-            <a href="#" target="_blank"> Linkedin</a>
+            Deepika <b>Munimadagu
+            </b><br>
+            <a href="#" target="_blank"> <img src="./images/LinkedIn_Logo.svg.png" height="40px"></a>
         </div>
     </div>
 
