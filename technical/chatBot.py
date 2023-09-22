@@ -2,8 +2,8 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 4,
-   "id": "11cbe9e8-7ced-4fb1-a90b-62f0b4045eb5",
+   "execution_count": null,
+   "id": "49a74c11-9d50-43d6-95dd-0a5407f8722c",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -14,54 +14,22 @@
     "from nltk.stem import WordNetLemmatizer\n",
     "from nltk.corpus import stopwords\n",
     "\n",
-    "import re"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 5,
-   "id": "dee39c9a-ec21-474e-a9f8-e70a32919c66",
-   "metadata": {},
-   "outputs": [],
-   "source": [
+    "import re\n",
+    "\n",
     "data_path = 'datasets/IPC_chatBot.json'\n",
     "\n",
     "with open(data_path, 'r') as file:\n",
-    "    data = json.load(file)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 13,
-   "id": "3c0aa5fd-1045-4a54-9e88-dc0523bb89cb",
-   "metadata": {},
-   "outputs": [],
-   "source": [
+    "    data = json.load(file)\n",
+    "\n",
     "def find_best_match(user_query, keywords):\n",
     "    matches = get_close_matches(user_query, keywords, n=3, cutoff=0.3)\n",
-    "    return matches if matches else None"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 7,
-   "id": "0d3b5a51-7fe1-49a9-8171-15d9e06584e1",
-   "metadata": {},
-   "outputs": [],
-   "source": [
+    "    return matches if matches else None\n",
+    "\n",
     "def get_section(keyword, data):\n",
     "    for s in data['sections']:\n",
     "        if s['keywords'] == keyword:\n",
-    "            return [s['number'], s['section']]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 8,
-   "id": "f5afe194-2abc-4b53-b387-1ab0742dc18a",
-   "metadata": {},
-   "outputs": [],
-   "source": [
+    "            return [s['number'], s['section']]\n",
+    "\n",
     "def clean_input(user_input):\n",
     "\n",
     "    stop_words = stopwords.words('english')\n",
@@ -81,16 +49,8 @@
     "    user_input = sorted(set(user_input))\n",
     "    user_input = ' '.join(user_input)\n",
     "\n",
-    "    return user_input"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 15,
-   "id": "c8ddc3f5-5bc4-4036-bc02-9904aa0a8602",
-   "metadata": {},
-   "outputs": [],
-   "source": [
+    "    return user_input\n",
+    "\n",
     "def chatbot(data):\n",
     "    \n",
     "    while True:\n",
@@ -112,16 +72,8 @@
     "            else:\n",
     "                break\n",
     "        \n",
-    "        print('Kindly enter a more detailed report that contains strong keywords to help you out in your case.')"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "07c9558c-5fb5-4a5f-bf95-c48fc8e342a9",
-   "metadata": {},
-   "outputs": [],
-   "source": [
+    "        print('Kindly enter a more detailed report that contains strong keywords to help you out in your case.')\n",
+    "\n",
     "chatbot(data)"
    ]
   }
