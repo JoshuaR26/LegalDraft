@@ -1,7 +1,6 @@
-<!-- CONTACTPAGE1.HTML IS THE NEW CONTACT PAGE THAT WE ARE SUPPOSED TO USE -->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,21 +16,16 @@
     <title>Contact Us</title>
 </head>
 <style>
-     
-    body{
-        /* background: rgb(255,196,83);
-        background: linear-gradient(0deg, rgba(255,196,83,1) 0%, rgba(255,255,255,1) 100%);  */
+    body {
         background-image: url("./images/Desktop\ -\ 11.png");
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
         width: 100%;
-        margin:0rem;
-
- 
+        margin: 0rem;
     }
-    
-    .container{
+
+    .container {
         display: flex;
         flex-flow: row wrap;
         height: 70vh;
@@ -41,48 +35,37 @@
         margin: auto;
         margin-top: 3rem;
         flex-wrap: wrap;
-        
     }
 
-    .names{
-        /* border: 0.3rem solid #F9ECDA;
-        background-color: #F9ECDA; */
+    .names {
         width: 30%;
         height: 30%;
-        font-family: 'Glegoo',serif;
+        font-family: 'Glegoo', serif;
         text-align: center;
         font-size: 1.6rem;
         padding-top: 3rem;
         flex-wrap: wrap;
-        /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) */
-
-        background: rgba(255, 255, 255, 0.28);
-        border-radius: 10%;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5.6px);
-        -webkit-backdrop-filter: blur(5.6px);
+        background: rgba(255, 255, 255, 0.667);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        font-weight: 300;
         border: 1px solid rgba(255, 255, 255, 0.67);
-    
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        border-radius: 2%;
+        animation: anim2 0.5s;
 
     }
 
-    .names:hover{
-        /* From https://css.glass */
-        background: rgba(255, 254, 254, 0.28);
-        /* border-radius: 16px; */
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(16.1px);
-        -webkit-backdrop-filter: blur(16.1px);
-        border: 1px solid rgba(208, 201, 201, 1);
-        width: 33%;
-        height: 33%;
-        
+    .names:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        filter: brightness(1);
         cursor: pointer;
-        transition: all 0.5s ease;
     }
 
-    .title{
-        font-family: 'David Libre',serif;
+    .title {
+        font-family: 'David Libre', serif;
         font-weight: bold;
         font-size: 3rem;
         display: block;
@@ -92,16 +75,38 @@
         width: 25rem;
         text-align: center;
     }
-    a{
+
+    a {
         text-decoration: none;
-        color:  rgb(255,196,83);
+        color: rgb(255, 196, 83);
         font-size: 1.1rem;
     }
 
-    a:hover{
+    a:hover {
         color: #102C57;
-        transition:  all 0.5s ease;
+        transition: all 0.3s ease-in-out;
     }
+
+    .contact-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        text-decoration: underline;
+        transition: text-decoration 1s ease-in;
+    }
+
+    @keyframes anim2 {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+      
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
 
 </style>
 
@@ -114,7 +119,7 @@
             <li><a href="./index.html">Main</a></li>
             <li><a href="./aboutpage.html">About Us</a></li>
             <li><a href="./contactpage.html">Contact us</a></li>
-            <li><a href="/backend/templates/chatbot.html">Chatbot</a></li>
+            <li><a href="/backend/templates/chatbot.html">ChatBot</a></li>
             <li><a href="./login1.html">Login</a></li>
         </ul>
         <div class="search">
@@ -123,38 +128,42 @@
         <div class="menu">
             <i class="fa fa-bars"></i>
         </div>
+       
     </nav>
 
-    <div class="title">
-    Contact Us
-    </div>
+    <div class="contact-div" >Contact Us</div>
+
+    <!-- <div class="title">
+        Contact Us
+    </div> -->
 
     <div class="container">
         <div class="names">
             Joshua Raju <br>
-            <a  href="#"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/joshua-raju-775494256/" target="_blank"> Linkedin</a>
         </div>
         <div class="names">
             Ayan Biswa Dutta<br>
-            <a  href="#"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/ayan-biswa-dutta-065370248/" target="_blank"> Linkedin</a>
         </div>
         <div class="names">
             Amritanshu Tripathy<br>
-            <a  href="#"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/amritanshu-tripathy-91546b253/" target="_blank"> Linkedin</a>
         </div>
         <div class="names">
             Aditya Rana<br>
-            <a  href="#"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/aditya-rana-9a81b0235" target="_blank"> Linkedin</a>
         </div>
         <div class="names">
             Adisha Shaikh<br>
-            <a  href="#"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/adisha-shaikh-917035250/" target="_blank"> Linkedin</a>
         </div>
         <div class="names">
             Deepika M<br>
-            <a  href="#"> Linkedin</a>
+            <a href="#" target="_blank"> Linkedin</a>
         </div>
     </div>
-    
+
 </body>
+
 </html>

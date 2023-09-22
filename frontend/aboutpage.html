@@ -23,8 +23,11 @@
     }
     
     body{
-        background: rgb(255,196,83);
-        background: linear-gradient(0deg, rgba(255,196,83,1) 0%, rgba(255,255,255,1) 100%);
+        /* background: rgb(255,196,83);
+        background: linear-gradient(0deg, rgba(255,196,83,1) 0%, rgba(255,255,255,1) 100%); */
+        background-image: url("./images/Desktop\ -\ 11.png");
+        background-repeat: no-repeat;
+        background-size: cover;
         height: 100vh;
         width: 100%;
         /* border: 0.5rem solid rgb(165, 136, 82); */
@@ -46,14 +49,36 @@
         font-size: 3rem;
         font-family: 'David Libre',serif;
         border-bottom: 0.5rem solid #102C57; 
-        
+        animation: anim2 0.7s;        
     }
+
+    @keyframes anim2 {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+      
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+
+
+
+
+
+    
+    
+
+
     #about{
         float:left;
         text-align: left;
         font-size: 1.5rem;
         margin-left: 7rem;
-        margin-bottom: 0rem;
+        margin-bottom: -1rem;
 
     }
     #vision{
@@ -61,12 +86,14 @@
         text-align: right;
         font-size: 1.5rem;
         margin-right: 7rem;
-        margin-top: 0rem;
+        margin-top: -1rem;
     }
 
     p{
         font-family: 'Glegoo',serif;
         font-size: 1.3rem;
+        animation: anim2 0.7s;
+        
     }
 
 html{
@@ -76,6 +103,7 @@ html{
 </style>
 
 <body>
+    
     <nav>
         <div class="logo">
             <span>LegalDraft</span>
@@ -83,8 +111,9 @@ html{
         <ul>
             <li><a href="./index.html">Main</a></li>
             <li><a href="./aboutpage.html">About Us</a></li>
-            <li><a href="./contactpage.html">Contact us</a></li>
-            <li><a href="./loginpage.html">Login</a></li>
+            <li><a href="./contactpage1.html">Contact us</a></li>
+            <li><a href="/backend/templates/chatbot.html">Chatbot</a></li>
+            <li><a href="./login1.html">Login</a></li>
         </ul>
         <div class="search">
             <i class="fa fa-search"></i>
