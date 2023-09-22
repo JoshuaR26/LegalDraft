@@ -49,14 +49,36 @@
         font-size: 3rem;
         font-family: 'David Libre',serif;
         border-bottom: 0.5rem solid #102C57; 
-        
+        animation: anim2 0.7s;        
     }
+
+    @keyframes anim2 {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+      
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+
+
+
+
+
+    
+    
+
+
     #about{
         float:left;
         text-align: left;
         font-size: 1.5rem;
         margin-left: 7rem;
-        margin-bottom: 0rem;
+        margin-bottom: -1rem;
 
     }
     #vision{
@@ -64,12 +86,14 @@
         text-align: right;
         font-size: 1.5rem;
         margin-right: 7rem;
-        margin-top: 0rem;
+        margin-top: -1rem;
     }
 
     p{
         font-family: 'Glegoo',serif;
         font-size: 1.3rem;
+        animation: anim2 0.7s;
+        
     }
 
 html{
@@ -79,6 +103,7 @@ html{
 </style>
 
 <body>
+    
     <nav>
         <div class="logo">
             <span>LegalDraft</span>
