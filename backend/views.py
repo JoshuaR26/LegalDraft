@@ -5,7 +5,7 @@ views = Blueprint(__name__,"views")
 
 @views.route("/")
 def home():
-    return render_template("index.html",ipc="loda")
+    return render_template("chatbot.html",ipc="loda")
 
 @views.route("/",methods=['post'])
 def profile():
@@ -51,7 +51,7 @@ def profile():
                     return section
     output = chat_bot(name)
     #print(output)
-    return render_template("index.html",ipc = output)
+    return render_template("chatbot.html",ipc = output)
         
 
 
