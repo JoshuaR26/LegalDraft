@@ -27,7 +27,6 @@
         background-repeat: no-repeat;
         height: 100vh;
         width: 100%;
-        margin:0rem;
     }
 
     .container{
@@ -38,6 +37,7 @@
         float: left;
         height: 8%;
         border-bottom: 0.3rem solid #102C57;
+       
     }
     .box{
         float: left;
@@ -46,6 +46,7 @@
         float: right;
         height: fit-content;
         width: 48%;
+        margin-right: 0rem;
     }
 
     #woman{
@@ -73,16 +74,18 @@
     padding: 2rem 2rem 2rem 2rem;
     text-align: center; 
     display: flex;
-    align-items: center center;
     flex-direction: column;
-    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
     }
     #loginbutton{
         color: rgb(0, 0, 0);
-        width: 200px;
+        width: 25rem;
         margin-top: 10px;
         background-color: rgb(229, 156, 39);
         cursor: pointer;
+        height: 2rem;
+        
     }
     #loginbutton:hover{
         background-color: gold;
@@ -91,12 +94,19 @@
     #googlebutton{
         cursor: pointer;
         background-color: white;
+        height: 3rem;
+        width:25rem;
     }
 
     #googlebutton:hover{
         background-color: palegoldenrod;
     }
 
+    input{
+        width: 25rem;
+        height: 1.5rem;
+        background-color: rgb(223, 227, 177);
+    }
     html{
         scroll-behavior: smooth;
     }
