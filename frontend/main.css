@@ -77,6 +77,7 @@ nav ul li a:hover::after {
     left: 120px;
     font-weight: bold;
     text-transform: uppercase;
+    color: #925C20;
 }
 
 .search {
@@ -99,21 +100,25 @@ nav ul li a:hover::after {
 .title {
     position: fixed;
     position: absolute;
-    top: 276px;
+    top: 350px;
     left: 43%;
     line-height: .5;
-    font-size: 100px;
-    font-weight: 700;
-    letter-spacing: -6px;
+    font-size: 110px;
+    /* font-weight: 700; */
+    letter-spacing: 8px;
 }
 
 .title p {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 300;
     color: #102C57;
     text-transform: uppercase;
     left: 150px;
     letter-spacing: 10px;
+    
+}
+#legal {
+    color: #FFC453;
 }
 
 .btn a {
@@ -154,7 +159,7 @@ nav ul li a:hover::after {
     cursor: pointer;
     font-size: 18px;
     margin: 24px 0;
-    transition: .3s;
+    transition: .1s;
 }
 
 .media ul li:hover {

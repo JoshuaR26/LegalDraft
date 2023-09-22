@@ -15,6 +15,7 @@
     <title>About us</title>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
      header{
         height: 3rem;
         /* border: 2px solid black; */
@@ -25,7 +26,7 @@
     body{
         /* background: rgb(255,196,83);
         background: linear-gradient(0deg, rgba(255,196,83,1) 0%, rgba(255,255,255,1) 100%); */
-        background-image: url("./images/Desktop\ -\ 11.png");
+        /* background-image: url("./images/Desktop\ -\ 11.png"); */
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
@@ -36,7 +37,7 @@
        
     }
     .container{
-        padding: 0.3rem;
+        padding: 6rem;
     }
     .item{
         margin: 0.7rem;
@@ -45,10 +46,12 @@
         
     }
     .title{
-        color:#102C57 ;
+        color:#925C20 ;
         font-size: 3rem;
-        font-family: 'David Libre',serif;
-        border-bottom: 0.5rem solid #102C57; 
+        font-family: 'Poppins';
+        text-transform: uppercase;
+        border-bottom: 0.5rem solid #FFC453; 
+        
         animation: anim2 0.7s;        
     }
 
@@ -64,24 +67,17 @@
         }
       }
 
-
-
-
-
-
-    
-    
-
-
     #about{
+        border-bottom: 0.5rem solid #FFC453; 
         float:left;
         text-align: left;
         font-size: 1.5rem;
         margin-left: 7rem;
-        margin-bottom: -1rem;
+        margin-bottom: 10rem;
 
     }
     #vision{
+        top: 100rem;
         float: right;
         text-align: right;
         font-size: 1.5rem;
@@ -90,8 +86,9 @@
     }
 
     p{
-        font-family: 'Glegoo',serif;
+        font-family: 'Poppins';
         font-size: 1.3rem;
+        line-height: 40px;
         animation: anim2 0.7s;
         
     }
@@ -124,7 +121,7 @@ html{
     </nav>
     <div class="container">
         <div class="item" id="about">
-            <h1 class="title"> About Us</h1>
+            <h1 class="title"> About <b>US</b></h1>
             <p> 
                 At LegalDraft, we are revolutionizing the way legal advocacy is approached in the digital age. Our journey began with a simple yet profound mission: to empower individuals, businesses, and organizations to navigate the complexities of the legal landscape with confidence and clarity.</p>
         </div>
