@@ -1,0 +1,34 @@
+/* Add general styling for team member boxes */
+.team-member {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.member-box {
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Add hover effect - glow movement */
+.member-box:hover {
+    box-shadow: 0 0 10px 3px rgba(255, 165, 0, 0.7); /* Adjust the color and glow effect */
+    transform: scale(1.02); /* Adjust the scaling factor for a subtle zoom effect */
+}
+
+/* Style headings and links */
+.member-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.member-box a {
+    text-decoration: none;
+    color: #333;
+}
