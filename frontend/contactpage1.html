@@ -45,13 +45,16 @@
         font-size: 1.6rem;
         padding-top: 3rem;
         flex-wrap: wrap;
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.667);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
+        font-weight: 300;
         border: 1px solid rgba(255, 255, 255, 0.67);
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         border-radius: 2%;
+        animation: anim2 0.5s;
+
     }
 
     .names:hover {
@@ -81,6 +84,7 @@
 
     a:hover {
         color: #102C57;
+        transition: all 0.3s ease-in-out;
     }
 
     .contact-div{
@@ -91,6 +95,18 @@
         text-decoration: underline;
         transition: text-decoration 1s ease-in;
     }
+
+    @keyframes anim2 {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+      
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
 
 </style>
 
@@ -124,27 +140,27 @@
     <div class="container">
         <div class="names">
             Joshua Raju <br>
-            <a href="#"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/joshua-raju-775494256/" target="_blank"> Linkedin</a>
         </div>
         <div class="names">
             Ayan Biswa Dutta<br>
-            <a href="#"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/ayan-biswa-dutta-065370248/" target="_blank"> Linkedin</a>
         </div>
         <div class="names">
             Amritanshu Tripathy<br>
-            <a href="#"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/amritanshu-tripathy-91546b253/" target="_blank"> Linkedin</a>
         </div>
         <div class="names">
             Aditya Rana<br>
-            <a href="#"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/aditya-rana-9a81b0235" target="_blank"> Linkedin</a>
         </div>
         <div class="names">
             Adisha Shaikh<br>
-            <a href="#"> Linkedin</a>
+            <a href="https://www.linkedin.com/in/adisha-shaikh-917035250/" target="_blank"> Linkedin</a>
         </div>
         <div class="names">
             Deepika M<br>
-            <a href="#"> Linkedin</a>
+            <a href="#" target="_blank"> Linkedin</a>
         </div>
     </div>
 
