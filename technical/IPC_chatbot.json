@@ -1,0 +1,12 @@
+{
+    "IPC" : [
+        {
+            "number" : "239",
+            "section" : "Delivery of coin possessed with knowledge that it is counterfeit.--Whoever, having any counterfeit coin, which at the time when he became possessed of it, he knew to be counterfeit, fraudulently or with intent that fraud may be committed, delivers the same to any persons or attempts to induce any person to receive it, shall be punished with imprisonment of either description for a term which may extend to five years, and shall also be liable to fine."
+        },
+        {
+            "number" : "320",
+            "section": "Voluntarily causing hurt to extort confession or to compel restoration of property."
+        }
+    ]
+}
