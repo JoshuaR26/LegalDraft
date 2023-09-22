@@ -51,6 +51,24 @@
         border-bottom: 0.5rem solid #102C57; 
         
     }
+
+    @keyframes anim2 {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+      
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+
+    
+    
+
+
     #about{
         float:left;
         text-align: left;
@@ -70,6 +88,8 @@
     p{
         font-family: 'Glegoo',serif;
         font-size: 1.3rem;
+        animation: anim2 0.7s;
+
     }
 
 html{
