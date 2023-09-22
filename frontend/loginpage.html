@@ -63,61 +63,70 @@
         font-size: 3rem;
         font-weight: bold;
         letter-spacing: 0.3rem;
-        width: 34.5rem;
+        width: 25rem;
         margin-left: 6%;
         margin-top: 8%;
         
     }
     .box{
-    border: 0.3rem solid rgb(232, 193, 18);
+    /* border: 0.3rem solid rgb(232, 193, 18); */
     width: 30rem;
     height: 20rem;
     margin-left: 6%;
     margin-top: 2%;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 1rem 1rem 1rem 1rem;
     text-align: center; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Glegoo',serif;
-    }
-    #loginbutton{
-        color: rgb(0, 0, 0);
-        width: 25rem;
-        margin-top: 10px;
-        background-color: rgb(229, 156, 39);
-        cursor: pointer;
-        height: 2rem;
-        font-family: 'Glegoo',serif;
-        
-    }
-    #loginbutton:hover{
-        background-color: gold;
-    }
-
-    #googlebutton{
-        cursor: pointer;
-        background-color: white;
-        height: 3rem;
-        width:25rem;
-        font-family: 'Glegoo',serif;
-    }
-
-    #googlebutton:hover{
-        background-color: palegoldenrod;
-    }
-
-    input{
-        width: 25rem;
-        height: 1.5rem;
-        background-color: rgb(245, 238, 182);
-        border: none;
-    }
-    html{
-        scroll-behavior: smooth;
-    }
     
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.67);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 2%;
+    z-index: -1;
+    }
+
+    .box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        filter: brightness(1);
+        cursor: pointer;
+        z-index: -1;
+    }
+    .disc{
+        font-family: 'Philosopher',sans serif;
+        margin-top: 0.3rem;
+        font-size: 2rem;
+    }
+
+    .para{
+        font-family: 'Glegoo', serif;
+        margin-top: 1rem;
+    }
+
+    button{
+        height: 3rem;
+        width: 5rem;
+        margin: 2rem 6rem 2rem 6rem;
+        background-color: #E09400;
+        border: none;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: black;
+        color: #E09400;
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+    }
 </style>
 
 <body>
@@ -130,7 +139,7 @@
             <li><a href="./index.html">Main</a></li>
             <li><a href="./aboutpage.html">About Us</a></li>
             <li><a href="./contactpage1.html">Contact us</a></li>
-            <li><a href="#">Chatbot</a></li>
+            <li><a href="/backend/templates/chatbot.html">Chatbot</a></li>
             <li><a href="./loginpage.html">Login</a></li>
         </ul>
         <div class="search">
@@ -147,19 +156,17 @@
         </div>
 
         <div class="head">
-            LOGIN
+            A.I. ADVOCATE
         </div>
 
         <div class="box">
-            <button href="#" id="googlebutton">Sign up with Google </button>
-            <p> or </p>
-            <label> Email </label> 
-            <input type="email" placeholder="Enter your email"> 
-            <label>Password</label> 
-            <input type="password" placeholder="Enter your password"> 
-            <button href="#" id="loginbutton">Login</button>
-            <div id="newacc">
-                <a href="#"> New here? Create Account!</span> </a>
+            <div class="disc">Disclaimer</div> 
+            <div class="para">
+                This is an AI model, solely meant for research and enquiry purposes only. Do note that it is still under development and might give inacurrate results. Incase of any court case, please refer to a real attorney. We are not responsible for any actions taken by the user based off the information provided by our AI.
+            </div>
+            <div class="buttons">
+                <button> ACCEPT </button>
+                <button> DECLINE </button>
             </div>
         </div>
         

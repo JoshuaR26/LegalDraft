@@ -33,7 +33,7 @@ def profile():
             
 
     def chat_bot(name):
-        knowledge_base = load_knowledge_base('knowledgebase.json')
+        knowledge_base = load_knowledge_base('backend/knowledgebase.json')
         cnt = 0
         while cnt<1:
             cnt+=1
