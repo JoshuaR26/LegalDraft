@@ -11,8 +11,11 @@ class Chatbox{
 
     display(){
         const {topenButton, chatBox, sendButton} = this.args;
+
         openButton.addEventListener('click',() => this.togaleState(chatBox))
+        
         sendButton.addEventListener('click',() => this.onSendButton(chatBox))
+        
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
             if (key ==="Enter"){

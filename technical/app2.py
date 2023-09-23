@@ -1,7 +1,13 @@
 from flask import Flask, render_template, request, jsonify
-from chat import chatBot
+from chat import chatbot
+import json
 
 app = Flask(__name__)
+
+data_path = 'a.json'
+
+with open(data_path,'r') as file:
+    data = json.load(file)
 
 @app.get("/")
 def index_get():
@@ -11,7 +17,7 @@ def index_get():
 def predict():
     text = request.get_json().get ("message")
     # TODO: check if text is valid
-    response = chatBot(text)
+    response = chatbot(data,text)
     message = {"answer": response}
     return jsonify(message)
 

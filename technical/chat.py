@@ -1,4 +1,3 @@
-import json
 from difflib import get_close_matches 
 
 import nltk
@@ -7,10 +6,7 @@ from nltk.corpus import stopwords
 
 import re
 
-data_path = 'a.json'
 
-with open(data_path,'r') as file:
-    data = json.load(file)
 
 def find_best_match(user_query, keywords):
     matches = get_close_matches(user_query, keywords, n=3, cutoff=0.3)
@@ -42,10 +38,10 @@ def clean_input(user_input):
 
     return user_input
 
-def chatbot(data):
+def chatbot(data,user: str):
     
     while True:
-        user_input = input('USER: ')
+        user_input = user
     
         if user_input == 'exit':
             break
@@ -64,5 +60,3 @@ def chatbot(data):
                 break
         
         print('Kindly enter a more detailed report that contains strong keywords to help you out in your case.')
-
-chatbot(data)
