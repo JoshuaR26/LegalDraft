@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,6 @@
         width: 100%;
         /* border: 0.5rem solid rgb(165, 136, 82); */
         margin:0rem;
-
        
     }
     .container{
@@ -43,8 +42,9 @@
     .item{
         margin: 0.7rem;
         width: 51%;
-        
-        
+        opacity: 0; /* Initial opacity set to 0 */
+        transform: translateX(-20px); /* Initial transform set to come from the left */
+        transition: opacity 0.7s, transform 0.7s; /* Transition for opacity and transform */
     }
     .title{
         color:#102C57 ;
@@ -52,60 +52,21 @@
         font-family: 'Poppins';
         text-transform: uppercase;
         border-bottom: 0.5rem solid #FFC453; 
-        letter-spacing: 6px;
-        animation: anim2 0.7s;        
+        letter-spacing: 6px;       
     }
 
-    @keyframes anim2 {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-      
-        to {
-          opacity: 1;
-          transform: translateY(0px);
-        }
-      }
-
-    #about{
+    #about, #vision, #motto{
         border-bottom: 0.5rem solid #FFC453; 
-        float:left;
         text-align: left;
         font-size: 1.5rem;
         margin-left: 7rem;
         margin-bottom: 5rem;
-        animation: anim2 0.7s;  
-
-    }
-    #vision{
-        top: 100rem;
-        float: right;
-        text-align: right;
-        font-size: 1.5rem;
-        margin-right: 7rem;
-        margin-bottom: 5rem;
-        border-bottom: 0.5rem solid #FFC453;
-        animation: anim2 0.7s;      
-    }
-
-    #motto{
-        top: 100rem;
-        float: left;
-        text-align: left;
-        font-size: 1.5rem;
-        margin-left: 7rem;
-        bottom: 10rem;
-        border-bottom: 0.5rem solid #FFC453;
-        animation: anim2 0.7s;      
     }    
 
     p{
         font-family: 'Poppins';
         font-size: 1.3rem;
         line-height: 40px;
-        animation: anim2 0.7s;
-        
     }
 
 html{
@@ -141,14 +102,14 @@ html{
         <section class="item" id="about">
             <h1 class="title" id="aboutus_text">About US</h1>
             <p> 
-                At LegalDraft, we are at the forefront of revolutionizing the way legal advocacy is approached in the digital age. Our journey began with a simple yet profound mission: to empower insectioniduals, businesses, and organizations to navigate the often intricate and challenging terrain of the legal landscape with unparalleled confidence and crystal-clear clarity. As we continue to advance, we remain steadfast in our commitment to harnessing cutting-edge technology and innovative solutions, driven by the belief that access to justice should be universally attainable. Our dedication extends beyond mere legal guidance; it's a commitment to reshaping the very fabric of legal practice, making it more accessible, efficient, and ultimately, more just.
+                At LegalDraft, we are at the forefront of revolutionizing the way legal advocacy is approached in the digital age. Our journey began with a simple yet profound mission: to empower insectioniduals, businesses, and organizations to navigate the often intricate and challenging terrain of the legal landscape with unparalleled confidence and crystal-clear clarity. As we continue to advance, we remain steadfast in our commitment to harnessing cutting-edge technology and innovative solutions, driven by the belief that access to justice should be universally attainable. Our dedication extends beyond mere legal guidance; it's a commitment to reshaping the very fabric of legal practice, making it more accessible, efficient, and ultimately, more just.
             </p>
         </section>
 
         <section class="item" id="vision">
             <h1 class="title"> Our Vision</h1>
             <p>
-                We envision a world where justice is not a privilege, but an inalienable right, accessible to all, regardless of background or circumstance. In this vision, legal processes are not burdensome obstacles but seamlessly streamlined pathways to fair and equitable resolutions. Every voice, from insectioniduals to organizations, is not only heard but passionately represented, ensuring that the principles of justice are upheld. Our unwavering belief is that technology can serve as a powerful catalyst for positive change in the legal field. We are steadfast in our commitment to harnessing its transformative potential, not only to bridge gaps and remove barriers but to fundamentally reshape the legal system itself, making it more inclusive, more equitable, and profoundly more efficient.
+                We envision a world where justice is not a privilege, but an inalienable right, accessible to all, regardless of background or circumstance. In this vision, legal processes are not burdensome obstacles but seamlessly streamlined pathways to fair and equitable resolutions. Every voice, from insectioniduals to organizations, is not only heard but passionately represented, ensuring that the principles of justice are upheld. Our unwavering belief is that technology can serve as a powerful catalyst for positive change in the legal field. We are steadfast in our commitment to harnessing its transformative potential, not only to bridge gaps and remove barriers but to fundamentally reshape the legal system itself, making it more inclusive, more equitable, and profoundly more efficient.
             </p>
         </section>
         <section class="item" id="motto">
@@ -158,6 +119,35 @@ html{
             </p>
         </section>
     </section>
+    <script>
+        // Function to handle scroll animations
+        function handleScrollAnimation(entries, observer) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1; // Set opacity to 1 when visible
+                    entry.target.style.transform = 'translateX(0px)'; // Reset transform when visible
+                } else {
+                    entry.target.style.opacity = 0; // Set opacity to 0 when not visible
+                    entry.target.style.transform = 'translateX(-20px)'; // Move to the left when not visible
+                }
+            });
+        }
+
+        // Create an Intersection Observer
+        const observer = new IntersectionObserver(handleScrollAnimation, {
+            root: null, // Use the viewport as the root
+            threshold: 0.2, // Trigger when 20% of the element is visible
+        });
+
+        // Select all elements with the class "item"
+        const scrollAnimatedElements = document.querySelectorAll('.item');
+
+        // Observe each animated element
+        scrollAnimatedElements.forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+
     <script>
         TweenMax.from(".line-one", 1, {
             opacity: 0,
