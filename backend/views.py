@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 import re
 from flask import Blueprint, render_template, request
 import json
+
 views = Blueprint(__name__,"views")
 
 data_path = 'a.json'
@@ -14,10 +15,9 @@ data_path = 'a.json'
 with open(data_path,'r') as file:
     data = json.load(file)
 
-
 @views.route("/")
 def home():
-    return render_template("chatbot.html",ipc="loda")
+    return render_template("chatbot.html",ipc="dictionary")
 
 @views.route("/",methods=['post'])
 def profile():
@@ -80,4 +80,6 @@ def profile():
                     break
             
             print('Kindly enter a more detailed report that contains strong keywords to help you out in your case.')
+
+    chatbot(data, name)
 
