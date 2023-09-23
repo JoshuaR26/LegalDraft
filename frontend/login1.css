@@ -30,7 +30,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    animation: anim2 0.8s;
 }
 h2{
     font-size: 2em;
@@ -138,3 +138,20 @@ button{
     color: #102C57;
     text-decoration: none;
 }
+
+@keyframes anim2 {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .email{
+    font-size: 1rem;
+    text-transform: lowercase;
+  }

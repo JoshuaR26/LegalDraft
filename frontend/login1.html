@@ -11,14 +11,17 @@
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_except.css">
     <link rel="stylesheet" href="login1.css">
 
 
   <title>LOGINLEGAL</title>
 </head>
 <body>
-
+    <div class="stripes">
+        <div class="line-one"></div>
+        <div class="line-two"></div>
+    </div>
     <nav>
         <div class="logo">
             <span>LegalDraft</span>
@@ -67,5 +70,20 @@
     </section>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        TweenMax.from(".line-one", 1, {
+            opacity: 0,
+            delay: .1,
+            y: -800,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from(".line-two", 1, {
+            opacity: 0,
+            delay: 0.5,
+            y: -800,
+            ease: Expo.easeInOut
+        })
+        
+    </script>
 </body>
 </html>
