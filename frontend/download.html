@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Download All Files</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background: #E3F2FD;
+        }
+
+        #downloadButton {
+            outline: none;
+            border: none;
+            color: #fff;
+            display: flex;
+            cursor: pointer;
+            padding: 16px 25px;
+            border-radius: 6px;
+            align-items: center;
+            white-space: nowrap;
+            background: #4A98F7;
+            transition: all 0.2s ease;
+        }
+
+        #downloadButton:hover {
+            background: #2382f6;
+        }
+
+        #downloadButton.timer {
+            color: #000;
+            background: none;
+            transition: none;
+            font-size: 1.6rem;
+            pointer-events: none;
+        }
+
+        #downloadButton.timer b {
+            color: #4A98F7;
+            padding: 0 8px;
+        }
+
+        #downloadButton .icon {
+            font-size: 2rem;
+        }
+
+        #downloadButton .text {
+            font-size: 1.5rem;
+            padding-left: 10px;
+        }
+
+        #downloadedFiles {
+            margin-top: 20px;
+        }
+
+        .downloaded-file {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button id="downloadButton" data-timer="10">
+        <span class="icon material-symbols-rounded">vertical_align_bottom</span>
+        <span class="text">Download Files</span>
+    </button>
+    <div id="downloadedFiles"></div>
+    <script>
+        const downloadBtn = document.getElementById("downloadButton");
+        const downloadedFilesContainer = document.getElementById("downloadedFiles");
+
+        const simulateDownload = () => {
+            if (downloadBtn.classList.contains("disable-timer")) {
+                return location.href = fileLink;
+            }
+            let timer = downloadBtn.dataset.timer;
+            downloadBtn.classList.add("timer");
+            downloadBtn.innerHTML = `Your download will begin in <b>${timer}</b> seconds`;
+            const initCounter = setInterval(() => {
+                if (timer > 0) {
+                    timer--;
+                    return downloadBtn.innerHTML = `Your download will begin in <b>${timer}</b> seconds`;
+                }
+                clearInterval(initCounter);
+                location.href = fileLink;
+                downloadBtn.innerText = "Your file is downloading...";
+                setTimeout(() => {
+                    downloadBtn.classList.replace("timer", "disable-timer");
+                    downloadBtn.innerHTML = `<span class="icon material-symbols-rounded">vertical_align_bottom</span>
+                                             <span class="text">Download Again</span>`;
+                }, 3000);
+            }, 1000);
+        }
+
+        downloadBtn.addEventListener("click", simulateDownload);
+
+        const fileLink = "https://drive.google.com/uc?export=download&id=1aYiaLn3YOjL-_o5QBCy7tU1epqA6gZoi";
+
+        // Simulate downloading files (for demonstration)
+        const files = ['File1.pdf', 'File2.docx', 'File3.txt'];
+
+        // Display downloaded files
+        files.forEach((file) => {
+            const fileElement = document.createElement("div");
+            fileElement.className = "downloaded-file";
+            fileElement.innerHTML = `Downloaded: ${file}`;
+            downloadedFilesContainer.appendChild(fileElement);
+        });
+
+        // Disable the download button after clicking
+        downloadBtn.disabled = true;
+        downloadBtn.textContent = "Files Downloaded";
+    </script>
+</body>
+</html>
