@@ -12,118 +12,64 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <!-- css -->
     <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <title>About us</title>
 </head>
 <style>
-    header{
-        height: 3rem;
-        margin:0rem;
-        
-    }
-    
     body{
-        /* background: rgb(255,196,83);
-        background: linear-gradient(0deg, rgba(255,196,83,1) 0%, rgba(255,255,255,1) 100%); */
-        /* background-image: url("./images/Desktop\ -\ 11.png"); */
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100%;
+        overflow: hidden;
     }
-
     .container{
-        height: 100vh;
-        width: 100vw;
-        
-    }
-    .head{
-        float: left;
-        height: 8%;
-       
-    }
-    .box{
-        float: left;
-    }
-    .image{
+        background-color: aliceblue;
+        border: 0.2rem solid black;
+        height:60vh;
+        width:60vw;
+        display: block;
+        margin: auto;
+        font-size: 2rem;
+        color:grey;
         position: absolute;
-        top: 4rem;
-        right: 4rem;
-        opacity: 0.2;
+        top:10rem;
+        left:21rem;
     }
 
-    #woman{
-        height: 42rem;
-        width: 32rem;
-        
-    }
-    .head{
-        color: #102C57;
-        font-family: 'David Libre', sans-serif;
-        font-size: 3rem;
-        font-weight: bold;
-        letter-spacing: 0.3rem;
-        width: 23.2rem;
-        margin-left: 10.5%;
-        margin-top: 8%;
-        
-        
-    }
-    .box{
-    /* border: 0.3rem solid rgb(232, 193, 18); */
-    width: 40rem;
-    height: 30rem;
-    position: absolute;
-    top: 9rem;
-    left: 30rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
-    
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .pic{
-        height: 1rem;
-        width: 0rem;;
+    .content{
+        font-size: 1.6rem;
+        color: black;
     }
 
     .name{
-        border: 0.1rem solid black;
-        width: 40%;
-        height:10%;
-
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
     }
     .aadhar{
-        border: 0.1rem solid black;
-        width:40%;
-        height:10%;
+        position: absolute;
+        top: 1rem;
+        left: 35rem;
     }
-    .address{
-        border: 0.1rem solid black;
-        width:90%;
-        height:30%;
-    }
-    .email{
-        border: 0.1rem solid black;
-        width: 40%;
-        height:10%;
-    }
-    .phone{
-        border: 0.1rem solid black;
-        width: 40%;
-        height:10%;
-    }
-    .item{
-        margin: 1rem 1rem 1rem 1rem;
 
+    .address{
+        position: absolute;
+        top: 9rem;
+        left: 2rem;
     }
-    
+
+    .email{
+        position: absolute;
+        top: 20rem;
+        left: 2rem;
+    }
+
+    .phone{
+        position: absolute;
+        top: 20rem;
+        left: 35rem;
+    }
+
 </style>
 
 <body>
-
+    
     <nav>
         <div class="logo">
             <span>LegalDraft</span>
@@ -144,23 +90,37 @@
     </nav>
 
     <div class="container">
-        <div class="image">
-            <img src="./images/woman.png" id="woman">
-        </div>
-
-        <div class="title">Your Profile</div>
-        <div class="box">
-            
-            <div class="name item">Name:<br> Lorem ipsum dolor sit amet consectetur</div>
-            <div class="aadhar item">Aadhar Number: <br> 9999 9999 9999 </div>
-            <div class="address item">Address: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fugit vero impedit illum ratione omnis facilis, molestiae magnam consequuntur accusamus perspiciatis minus ut ab inventore excepturi, tenetur, dignissimos expedita nobis. 
-
+        <div class="name">
+            Name:
+            <div class="content">
+                Yoyo Singh
             </div>
-            <div class="email item">Email: <br> Lorem ipsum dolor sit amet </div>
-            <div class="phone item">Phone Number:<br>  9999999999</div>
-
         </div>
-        
+        <div class="aadhar">
+            Aadhar Number: 
+            <div class="content">
+                1234 4567 6789
+            </div>
+        </div> <br>
+        <div class="address">
+            Address:
+            <div class="content">
+                 Lorem ipsum, dolor sit amet consectetur adipisicing.
+            </div>
+        </div> <br>
+        <div class="email">
+            Email:
+            <div class="content">
+                 yoyoyoyo@gmail.com
+            </div>
+        </div>
+        <div class="phone">
+            Phone Number: 
+            <div class="content">
+                1234567890
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
