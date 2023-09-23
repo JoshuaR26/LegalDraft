@@ -11,7 +11,7 @@
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_except.css">
     <title>Login</title>
 </head>
 <style>
@@ -74,7 +74,7 @@
     /* border: 0.3rem solid rgb(232, 193, 18); */
     width: 30rem;
     height: 20rem;
-    margin-left: 6%;
+    margin-left: 10%;
     margin-top: 2%;
     padding: 2rem;
     text-align: center; 
@@ -82,11 +82,28 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    
+    animation: anim2 0.8s;
     background: rgba(255, 255, 255, 0.5);
     /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); */
     border: solid #E09400 5px;
     }
+
+    @keyframes anim2 {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+      
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+      .email{
+        font-size: 1rem;
+        text-transform: lowercase;
+      }
 
    
     .disc{
@@ -132,7 +149,10 @@
 </style>
 
 <body>
-
+    <div class="stripes">
+        <div class="line-one"></div>
+        <div class="line-two"></div>
+    </div>
     <nav>
         <div class="logo">
             <span>LegalDraft</span>
@@ -170,7 +190,21 @@
                 <a href="./index.html"><button> DECLINE </button></a>
             </div>
         </div>
-
+    </div>
+    <script>
+        TweenMax.from(".line-one", 1, {
+            opacity: 0,
+            delay: .1,
+            y: -800,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from(".line-two", 1, {
+            opacity: 0,
+            delay: 0.5,
+            y: -800,
+            ease: Expo.easeInOut
+        })
         
+    </script>
 </body>
 </html>
