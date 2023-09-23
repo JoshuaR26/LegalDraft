@@ -11,14 +11,17 @@
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_except.css">
     <link rel="stylesheet" href="login1.css">
 
 
   <title>LOGINLEGAL</title>
 </head>
 <body>
-
+    <div class="stripes">
+        <div class="line-one"></div>
+        <div class="line-two"></div>
+    </div>
     <nav>
         <div class="logo">
             <span>LegalDraft</span>
@@ -26,7 +29,7 @@
         <ul>
             <li><a href="./index.html">Main</a></li>
             <li><a href="./aboutpage.html">About Us</a></li>
-            <li><a href="./contactpage.html">Contact us</a></li>
+            <li><a href="./contactpage1.html">Contact us</a></li>
             <li><a href="./disclaimer.html">Chatbot</a></li>
             <li><a href="./login1.html">Login</a></li>
         </ul>
@@ -44,22 +47,22 @@
                 <form action="">
                     <h2>Login</h2>
                     <div class="inputbox">
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required>
+                        <ion-icon name="mail-outline" id="line"></ion-icon>
+                        <input type="email" required id="line">
                         <label for="">Email</label>
                     </div>
                     <div class="inputbox">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
+                        <ion-icon name="lock-closed-outline" id="line"></ion-icon>
+                        <input type="password" required id="line">
                         <label for="">Password</label>
                     </div>
                     <div class="forget">
                         <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
                       
                     </div>
-                    <button>Log in</button>
+                    <button><a href="profile.html">Log in</a></button>
                     <div class="register">
-                        <p>Don't have a account <a href="#">Register</a></p>
+                        <p>Don't have a account? <a href="#">Register Here!</a></p>
                     </div>
                 </form>
             </div>
@@ -67,5 +70,20 @@
     </section>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        TweenMax.from(".line-one", 1, {
+            opacity: 0,
+            delay: .1,
+            y: -800,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from(".line-two", 1, {
+            opacity: 0,
+            delay: 0.5,
+            y: -800,
+            ease: Expo.easeInOut
+        })
+        
+    </script>
 </body>
 </html>

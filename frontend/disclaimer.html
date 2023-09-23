@@ -11,7 +11,7 @@
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_except.css">
     <title>Login</title>
 </head>
 <style>
@@ -24,7 +24,7 @@
     body{
         /* background: rgb(255,196,83);
         background: linear-gradient(0deg, rgba(255,196,83,1) 0%, rgba(255,255,255,1) 100%); */
-        background-image: url("./images/Desktop\ -\ 11.png");
+        /* background-image: url("./images/Desktop\ -\ 11.png");ś */
         background-repeat: no-repeat;
         background-size: cover;
         background-repeat: no-repeat;
@@ -39,7 +39,7 @@
     .head{
         float: left;
         height: 8%;
-        border-bottom: 0.3rem solid #102C57;
+        /* border-bottom: 0.3rem solid #102C57; */
        
     }
     .box{
@@ -58,9 +58,10 @@
         
     }
     .head{
+        
         color: #102C57;
-        font-family: 'David Libre', sans-serif;
-        font-size: 3rem;
+        font-family: Poppins;
+        font-size: 2.5rem;
         font-weight: bold;
         letter-spacing: 0.3rem;
         width: 23.2rem;
@@ -73,40 +74,63 @@
     /* border: 0.3rem solid rgb(232, 193, 18); */
     width: 30rem;
     height: 20rem;
-    margin-left: 6%;
+    margin-left: 10%;
     margin-top: 2%;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 2rem;
     text-align: center; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    
+    animation: anim2 0.8s;
     background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); */
+    border: solid #E09400 5px;
     }
+
+    @keyframes anim2 {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+      
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+      .email{
+        font-size: 1rem;
+        text-transform: lowercase;
+      }
 
    
     .disc{
         font-family: 'Philosopher',sans serif;
         margin-top: 0.3rem;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .para{
-        font-family: 'Glegoo', serif;
+        font-family: Philosopher;
+        font-size: 1.3rem;
         margin-top: 1rem;
+        line-height: 2rem;
     }
 
     button{
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 500px;
+        font-size: 1rem;
         height: 3rem;
         width: 5rem;
         margin: 2rem 6rem 2rem 6rem;
         background-color: #E09400;
         border: none;
         font-weight: bold;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        transition: all 0.5 ease
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.5s
 
 
     }
@@ -117,6 +141,7 @@
         color: #E09400;
     }
     .buttons{
+        font-family: 'Courier New', Courier, monospaces;
         display: flex;
         justify-content: space-between;
 
@@ -124,7 +149,10 @@
 </style>
 
 <body>
-
+    <div class="stripes">
+        <div class="line-one"></div>
+        <div class="line-two"></div>
+    </div>
     <nav>
         <div class="logo">
             <span>LegalDraft</span>
@@ -150,11 +178,10 @@
         </div>
 
         <div class="head">
-            A.I. ADVOCATE
+            <span>A.I. ADVOCATE</span>
         </div>
-
         <div class="box">
-            <div class="disc">Disclaimer</div> 
+            <div class="disc"><b>DISCLAIMER</b></div> 
             <div class="para">
                 This is an AI model, solely meant for research and enquiry purposes only. Do note that it is still under development and might give inacurrate results. Incase of any court case, please refer to a real attorney. We are not responsible for any actions taken by the user based off the information provided by our AI.
             </div>
@@ -163,7 +190,21 @@
                 <a href="./index.html"><button> DECLINE </button></a>
             </div>
         </div>
+    </div>
+    <script>
+        TweenMax.from(".line-one", 1, {
+            opacity: 0,
+            delay: .1,
+            y: -800,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from(".line-two", 1, {
+            opacity: 0,
+            delay: 0.5,
+            y: -800,
+            ease: Expo.easeInOut
+        })
         
-    
+    </script>
 </body>
 </html>

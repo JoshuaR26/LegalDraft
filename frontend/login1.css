@@ -2,7 +2,9 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'poppins',sans-serif;
+    font-family: 'poppins';
+    text-transform: uppercase;
+    
 }
 section{
     display: flex;
@@ -11,7 +13,7 @@ section{
     min-height: 100vh;
     width: 100%;
     
-    background-image: url('images/Desktop\ -\ 11.png');
+    /* background-image: url('images/Desktop\ -\ 11.png'); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -22,23 +24,25 @@ section{
     height: 450px;
     background: transparent;
     border: 2px solid rgba(255,255,255,0.5);
-    border-radius: 20px;
+    border-radius: 5px;
+    border: solid #FFC453 5px; 
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
     align-items: center;
-
+    animation: anim2 0.8s;
 }
 h2{
     font-size: 2em;
-    color: #fff;
+    color: #102C57;
     text-align: center;
+    letter-spacing: .4rem;
 }
 .inputbox{
     position: relative;
     margin: 30px 0;
     width: 310px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #925C20;
 }
 
 .inputbox label {
@@ -46,7 +50,7 @@ h2{
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    color: #fff;
+    color: #102C57;
     font-size: 1em;
     pointer-events: none;
     transition: .5s;
@@ -69,21 +73,25 @@ h2{
     outline: none;
     font-size: 1em;
     padding:0 35px 0 5px;
-    color: #fff;
+    color: #102C57;
 }
 .inputbox ion-icon{
     position: absolute;
     right: 8px;
-    color: #fff;
+    color: #102C57;
     font-size: 1.2em;
     top: 20px;
 }
 .forget{
     margin: -15px 0 15px ;
     font-size: .9em;
-    color: #fff;
+    color: #102C57;
     display: flex;
     justify-content: space-between;  
+}
+
+#line {
+    color: #925C20;
 }
 
 .forget label input{
@@ -91,7 +99,7 @@ h2{
     
 }
 .forget label a{
-    color: #fff;
+    color: #102C57;
     text-decoration: none;
 }
 .forget label a:hover{
@@ -101,7 +109,7 @@ button{
     width: 100%;
     height: 40px;
     border-radius: 40px;
-    background: #fff;
+    background: #FFC453;
     border: none;
     outline: none;
     cursor: pointer;
@@ -110,15 +118,40 @@ button{
 }
 .register{
     font-size: .9em;
-    color: #fff;
+    color: #102C57;
     text-align: center;
     margin: 25px 0 10px;
 }
 .register p a{
     text-decoration: none;
-    color: #fff;
+    color: #102C57;
     font-weight: 600;
 }
 .register p a:hover{
     text-decoration: underline;
 }
+
+.a {
+    color: #102C57;
+}
+.a:visited {
+    color: #102C57;
+    text-decoration: none;
+}
+
+@keyframes anim2 {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .email{
+    font-size: 1rem;
+    text-transform: lowercase;
+  }
