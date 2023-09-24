@@ -59,8 +59,9 @@ def profile():
         return user_input
 
     def chatbot(data,name: str):
-        
-        while True:
+        count = 0 
+        while count<1:
+            count +=1
             user_input = name
         
             if user_input == 'exit':
